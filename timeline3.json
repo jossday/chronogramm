@@ -1,0 +1,25 @@
+{
+    "title": {
+        "text": {
+          "headline": "ChronoGramm",
+          "text": "Un coup d'oeil sur l'actualité"
+        }
+    },
+    "events": [
+      {
+        "media": {
+          "url": "valls.png",
+          "thumbnail": "valls.png"
+        },
+        "start_date": {
+          "month": "7",
+          "day": "15",
+          "year": "2016",
+          "display_date": "15 juillet 2016"
+        },
+        "text": {
+          "headline": "Attentat de Nice - Tweet de Manuel Valls"
+        }
+      }
+    ]
+}
