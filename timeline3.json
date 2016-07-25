@@ -1,11 +1,25 @@
 {
     "title": {
         "text": {
-          "headline": "ChronoGramm",
-          "text": "Un coup d'oeil sur l'actualité"
+          "headline": ""
         }
     },
     "events": [
+      {
+        "media": {
+          "url": "img/valls.png",
+          "thumbnail": "img/valls.png"
+        },
+        "start_date": {
+          "month": "4",
+          "day": "15",
+          "year": "2002",
+          "display_date": "15 avril 2002"
+        },
+        "text": {
+          "headline": "Attentat de Nice - Tweet de Manuel Valls"
+        }
+      },
       {
         "media": {
           "url": "img/valls.png",
@@ -21,5 +35,6 @@
           "headline": "Attentat de Nice - Tweet de Manuel Valls"
         }
       }
+
     ]
 }
