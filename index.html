@@ -1,69 +1,21 @@
 <!DOCTYPE html>
-<html lang="en"><!--
-
-  	88888888888 d8b                        888 d8b                888888   d8888b
-  	    888     Y8P                        888 Y8P                   88b d88P  Y88b
-  	    888                                888                       888 Y88b
-  	    888     888 88888b d88b     d88b   888 888 88888b     d88b   888   Y888b
-  	    888     888 888  888  88b d8P  Y8b 888 888 888  88b d8P  Y8b 888      Y88b
-  	    888     888 888  888  888 88888888 888 888 888  888 88888888 888        888
-  	    888     888 888  888  888 Y8b      888 888 888  888 Y8b      88P Y88b  d88P
-  	    888     888 888  888  888   Y8888  888 888 888  888   Y8888  888   Y8888P
-  	                                                                d88P
-  	                                                              d88P
-  	                                                            888P
-  	 -->
+<html lang="en">
   <head>
     <title>ChronoGramm</title>
-    <meta name="description" content="Houston’s voice caught the imagination of the world propelling her to superstardom at an early age becoming one of the most awarded performers of our time.">
+    <meta name="description" content="">
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1,width=device-width">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
-    <!-- Style-->
-    <style>
-      html, body {
-      height:100%;
-      padding: 0px;
-      margin: 0px;
-      }
-      .tl-text h2.tl-headline-title, .tl-text h2.tl-headline{
-        margin-top: 20px !important;
-      }
-      .tl-text p{
-        margin-left: 5px;
-      }
-      /*.tl-timenav{
-        background-color: rgba(0,100,220,.8) !important;
-      }
-      .tl-timemarker .tl-timemarker-content-container{
-        background-color: rgba(0,169,250,.8) !important;
-      }*/
-      .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline, .tl-timemarker .tl-timemarker-content-container .tl-timemarker-content .tl-timemarker-text h2.tl-headline p{
-        color: black !important;
-      }
-    </style>
-    <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-	<link rel="shortcut icon" href="https://cdn.knightlab.com/libs/blueline/latest/assets/logos/favicon.ico">
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	   <link rel="shortcut icon" href="https://cdn.knightlab.com/libs/blueline/latest/assets/logos/favicon.ico">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+     <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+     <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
   </head>
   <body>
-      <!-- 1 -->
-      <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
-      <!-- 2 -->
-      <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
-      <div id='timeline-embed' style="width: 100%; height: 600px"></div>
-      <!-- 3 -->
+      <div id='timeline-embed' style="width: 100%; height: 800px"></div>
+
       <script type="text/javascript">
-        // The TL.Timeline constructor takes at least two arguments:
-        // the id of the Timeline container (no '#'), and
-        // the URL to your JSON data file or Google spreadsheet.
-        // the id must refer to an element "above" this code,
-        // and the element must have CSS styling to give it width and height
-        // optionally, a third argument with configuration options can be passed.
-        // See below for more about options.
         timeline = new TL.Timeline('timeline-embed',
           'timeline3.json');
       </script>

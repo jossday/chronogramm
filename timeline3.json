@@ -8,8 +8,8 @@
     "events": [
       {
         "media": {
-          "url": "valls.png",
-          "thumbnail": "valls.png"
+          "url": "img/valls.png",
+          "thumbnail": "img/valls.png"
         },
         "start_date": {
           "month": "7",
