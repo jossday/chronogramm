@@ -29,6 +29,7 @@ session_start();
                     <span id="loginName">'.$_SESSION['login'].'</span>
                     <a href="#" id="myAccount" class="loginLink">My Account</a>
                     <a href="#" id="addEvent" class="loginLink">Add a new Event</a>
+                    <a href="traitements/logout.php" class="btn btn-danger">Logout</a>
                   </div>';
         }
         else{
