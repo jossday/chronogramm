@@ -8,7 +8,7 @@ a:hover{
   width: 300px;
   cursor: pointer;
 }
-#login{
+#loginZone{
   position: absolute;
   top:20px;
   right: 20px;
@@ -31,4 +31,9 @@ a:hover{
   padding: 40px;
   position: absolute;
   display: none;
+}
+#loginName{
+  margin-right: 20px;
+  font-weight: bolder;
+  text-transform: uppercase;
 }
