@@ -12,6 +12,6 @@ while($data = $req->fetch()){
   array_push($events, $eventSingle);
 }
 $fileEvents = fopen('traitements/timeline.json', 'r+');
-fputs($fileEvents, '{"events":'.json_encode($events).'}');
+fputs($fileEvents, '{"title": {"text": {"headline": "Chrono Gramm<br/> L\'actualité d\'un coup d\'oeil"}},"events":'.json_encode($events).'}');
 fclose($fileEvents);
 ?>

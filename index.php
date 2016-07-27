@@ -19,10 +19,6 @@ session_start();
   </head>
   <body>
       <div id="header">
-        <div id="title">
-          <h1>ChronoGramm</h1>
-          <h3>L'actualité d'un coup d'oeil</h3>
-        </div>
         <?php
         if((isset($_SESSION['login'])) && ($_SESSION['login'] != '')){
           echo '  <div id="loginZone">
@@ -56,6 +52,10 @@ session_start();
         </div>
       </form>
 
+      <form id="search" name="search" method="get" action="">
+        <input type="text" class="form-control input-lg" name="q" id="q" placeholder="Search an event" />
+      </form>
+
       <div id='timeline-embed' style="width: 100%; height: 800px"></div>
       <?php
       require('traitements/getEvents.php');
@@ -65,8 +65,6 @@ session_start();
             start_at_slide: 0,
             debug:true
         }
-        var data = $("#data").html();
-        console.log(data);
         timeline = new TL.Timeline('timeline-embed',
           'traitements/timeline.json', additionalOptions);
 
@@ -105,6 +103,36 @@ session_start();
                 }
             });
         return false;
+        });
+        $('#q').val('');
+        $('#q').keyup( function(){
+          $field = $(this);
+          $('#ajax-loader').remove();
+          $('.user').html("");
+          if($field.val().length > 0)
+          {
+            $.ajax({
+            type : 'GET',
+            url : 'traitements/ajax-search.php',
+            data : 'q='+$(this).val(),
+            success : function(data){
+              console.log(data);
+              if(data != "No result"){
+                $('#ajax-loader').remove();
+                timeline = new TL.Timeline('timeline-embed',
+                'traitements/search.json', additionalOptions);
+              }
+              else{
+                $('#timeline-embed').html("<div id='no-result'>No result</div>");
+              }
+            }
+            });
+            $('#clean').show();
+          }
+          else{
+            timeline = new TL.Timeline('timeline-embed',
+              'traitements/timeline.json', additionalOptions);
+          }
         });
       </script>
   </body>
