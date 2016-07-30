@@ -107,7 +107,7 @@ session_start();
         });
 
         //Affichage du formulaire de connexion
-        $("#loginLink").click(function(){
+        $("#loginLink").click(function(event){
           $("#loginForm").fadeIn(700);
           //Overlay noir
           $('body').append('<div id="fade"></div>');
@@ -115,21 +115,27 @@ session_start();
         });
 
         //Affichage du formulaire d'inscription
-        $('#registerLink').click(function(){
+        $('#registerLink').click(function(event){
           $("#registerForm").fadeIn(700);
           //Overlay noir
           $('body').append('<div id="fade"></div>');
           $('#fade').show();
         });
 
-        /*$('body').click(function(e){
-          var target = $(e.target);
-          if ((target.not('#loginLink')) && (target.not('#registerLink'))){
-              $("#fade").remove();
-              $("#loginForm").hide();
-              $("#registerForm").hide();
+        $('body').click(function(e){
+          if(e.target.id != "loginLink" && e.target.id != "registerLink"){
+            $("#fade").remove();
+            $("#loginForm").hide();
+            $("#registerForm").hide();
           }
-        });*/
+        });
+
+        $('#loginForm').click(function(event){
+          event.stopPropagation();
+        });
+        $('#registerForm').click(function(event){
+          event.stopPropagation();
+        });
         //Connexion
         $("#btnConnect").click(function(){
                 var login = $('#login').val();
