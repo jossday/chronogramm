@@ -1,0 +1,3 @@
+timeline:
+    resource: "@TimelineBundle/Resources/config/routing.yml"
+    prefix:   /
