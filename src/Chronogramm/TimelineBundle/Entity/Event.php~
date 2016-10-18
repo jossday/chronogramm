@@ -1,0 +1,179 @@
+<?php
+
+namespace Chronogramm\TimelineBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Event
+ *
+ * @ORM\Table(name="event")
+ * @ORM\Entity(repositoryClass="Chronogramm\TimelineBundle\Repository\EventRepository")
+ */
+class Event
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="titre", type="string", length=255)
+     */
+    private $titre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="contenu", type="string", length=255)
+     */
+    private $contenu;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date", type="datetimetz")
+     */
+    private $date;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="date_publication", type="datetimetz")
+     */
+    private $datePublication;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Chronogramm\TimelineBundle\Entity\Category", cascade={"persist"})
+     */
+    private $categorie;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Chronogramm\TimelineBundle\Entity\Source")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $source;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Chronogramm\TimelineBundle\Entity\Media")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $media;
+
+    /**
+     * @ORM\ManyToMany(targetEntity="Chronogramm\TimelineBundle\Entity\Event", cascade={"persist"})
+     */
+    private $event;
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set titre
+     *
+     * @param string $titre
+     *
+     * @return Event
+     */
+    public function setTitre($titre)
+    {
+        $this->titre = $titre;
+
+        return $this;
+    }
+
+    /**
+     * Get titre
+     *
+     * @return string
+     */
+    public function getTitre()
+    {
+        return $this->titre;
+    }
+
+    /**
+     * Set contenu
+     *
+     * @param string $contenu
+     *
+     * @return Event
+     */
+    public function setContenu($contenu)
+    {
+        $this->contenu = $contenu;
+
+        return $this;
+    }
+
+    /**
+     * Get contenu
+     *
+     * @return string
+     */
+    public function getContenu()
+    {
+        return $this->contenu;
+    }
+
+    /**
+     * Set date
+     *
+     * @param \DateTime $date
+     *
+     * @return Event
+     */
+    public function setDate($date)
+    {
+        $this->date = $date;
+
+        return $this;
+    }
+
+    /**
+     * Get date
+     *
+     * @return \DateTime
+     */
+    public function getDate()
+    {
+        return $this->date;
+    }
+
+    /**
+     * Set datePublication
+     *
+     * @param \DateTime $datePublication
+     *
+     * @return Event
+     */
+    public function setDatePublication($datePublication)
+    {
+        $this->datePublication = $datePublication;
+
+        return $this;
+    }
+
+    /**
+     * Get datePublication
+     *
+     * @return \DateTime
+     */
+    public function getDatePublication()
+    {
+        return $this->datePublication;
+    }
+}
